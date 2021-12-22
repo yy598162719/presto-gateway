@@ -6,11 +6,11 @@ import lombok.Data;
 @Data
 public class NotifierConfiguration {
   private boolean startTlsEnabled;
-  private boolean smtpAuthEnabled;
-  private String smtpHost = "localhost";
-  private int smtpPort = 587;
+  private boolean smtpAuthEnabled=true;
+  private String smtpHost = "smtp.qq.com";
+  private int smtpPort = 465;
   private String smtpUser;
-  private String smtpPassword;
+  private String smtpPassword="eoufcmeagrohbcij";
   private String sender;
   private List<String> recipients;
 }

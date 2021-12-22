@@ -1,16 +1,12 @@
-routingRules:
-  rulesEngineEnabled: False
-  # rulesConfigPath: "src/main/resources/rules/routing_rules.yml"
-
 requestRouter:
   port: 8080
   name: prestoRouter
   historySize: 1000
 
 dataStore:
-  jdbcUrl: jdbc:mysql://127.0.0.1:3306/prestogateway
+  jdbcUrl: jdbc:mysql://aq5:3306/presto_ha?useSSL=false
   user: root
-  password: root123
+  password: 123456
   driver: com.mysql.cj.jdbc.Driver
 
 server:
@@ -22,11 +18,13 @@ server:
       port: 8091
 
 notifier:
-  smtpHost: localhost
-  smtpPort: 587
-  sender: presto-gw-monitor-noreply@lyft.com
+  smtpHost: smtp.qq.com
+  smtpPort: 465
+  smtpUser: 598162719@qq.com
+  smtpPassword: eoufcmeagrohbcij
+  sender: 598162719@qq.com
   recipients:
-    - prestodev@yourorg.com
+    - 2359206678@qq.com
 
 # This can be adjusted based on the coordinator state
 monitor:

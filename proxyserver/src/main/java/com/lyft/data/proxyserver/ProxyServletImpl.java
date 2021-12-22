@@ -62,6 +62,7 @@ public class ProxyServletImpl extends ProxyServlet.Transparent {
   protected String rewriteTarget(HttpServletRequest request) {
     String target = null;
     if (proxyHandler != null) {
+      // 进入重写逻辑
       target = proxyHandler.rewriteTarget(request);
     }
     if (target == null) {

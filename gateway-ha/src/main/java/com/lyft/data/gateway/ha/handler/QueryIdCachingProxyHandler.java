@@ -125,6 +125,7 @@ public class QueryIdCachingProxyHandler extends ProxyHandler {
           // This falls back on adhoc backend if there are no cluster found for the routing group.
           backendAddress = routingManager.provideBackendForRoutingGroup(routingGroup);
         } else {
+          // 默认使用adhoc资源组
           backendAddress = routingManager.provideAdhocBackend();
         }
       }

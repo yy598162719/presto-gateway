@@ -28,7 +28,7 @@ import org.apache.http.HttpStatus;
 public class ActiveClusterMonitor implements Managed {
   private static final ObjectMapper OBJECT_MAPPER = new ObjectMapper();
   public static final int BACKEND_CONNECT_TIMEOUT_SECONDS = 15;
-  public static final int MONITOR_TASK_DELAY_MIN = 1;
+  public static final int MONITOR_TASK_DELAY_MIN = 1440;
   public static final int DEFAULT_THREAD_POOL_SIZE = 10;
 
   private final List<PrestoClusterStatsObserver> clusterStatsObservers;
